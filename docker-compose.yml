@@ -1,0 +1,11 @@
+version: "3"
+services:
+  react-app-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: react-image
+    container_name: react-app-docker
+    network_mode: host
+    volumes:
+      - ./src:/app/src:ro
